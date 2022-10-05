@@ -1,4 +1,4 @@
-class GoogleCareersPage < SitePrism::Page
+class MicrosoftCareersPage < SitePrism::Page
   set_url "https://careers.google.com/"
   element :student_button, :xpath, "/html/body/div[1]/header/div[1]/div[1]/nav/ul/li[5]/a"
   element :student_job_button,:xpath ,"//*[@id='jump-content']/main/div[2]/div[1]/div/div[1]/div/div/div[2]/div/div/div/a[2]"
@@ -12,18 +12,13 @@ class GoogleCareersPage < SitePrism::Page
     sleep 3
   end
 
-  def student_jobs
+  def new_grad_role
     self.student_button.click
     sleep 2
     self.student_job_button.click
     sleep 4
     expand_job
     sleep 2
-  end
-
-  def new_grad_role
-    sleep 2
-    student_jobs
   end
 
   def intern_role

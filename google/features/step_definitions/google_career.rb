@@ -2,7 +2,7 @@ require_relative '../page_object/google_careers_page'
 
 text=""
 
-Given(/^Browser is open$/) do
+Given(/^Browser is open Google$/) do
   puts "Which Position You want to get data for?
       1: New Grad Role
       2: Internship Openings
@@ -15,7 +15,7 @@ Given(/^Browser is open$/) do
   when "3"
     text="Experienced"
   end
-  $google=GoogleCareersPage.new
+  $google=MicrosoftCareersPage.new
 end
 
 Then(/^Navigate to careers\.google\.com$/) do
@@ -26,10 +26,10 @@ Given(/^We are on careers\.google\.com$/) do
   sleep 2
 end
 
-When(/^we select jobs$/) do
+When(/^we select jobs Google$/) do
   $google.role_selection(text)
 end
 
-Then(/^Search result should display current openings$/) do
+Then(/^Search result should display current openings Google$/) do
   sleep 2
 end

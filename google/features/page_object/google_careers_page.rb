@@ -1,4 +1,4 @@
-class MicrosoftCareersPage < SitePrism::Page
+class GoogleCareersPage < SitePrism::Page
   set_url "https://careers.google.com/"
   element :student_button, :xpath, "/html/body/div[1]/header/div[1]/div[1]/nav/ul/li[5]/a"
   element :student_job_button,:xpath ,"//*[@id='jump-content']/main/div[2]/div[1]/div/div[1]/div/div/div[2]/div/div/div/a[2]"

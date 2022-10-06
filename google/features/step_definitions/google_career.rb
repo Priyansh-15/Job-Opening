@@ -15,7 +15,7 @@ Given(/^Browser is open Google$/) do
   when "3"
     text="Experienced"
   end
-  $google=MicrosoftCareersPage.new
+  $google=GoogleCareersPage.new
 end
 
 Then(/^Navigate to careers\.google\.com$/) do
